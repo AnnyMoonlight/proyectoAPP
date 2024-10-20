@@ -1,0 +1,53 @@
+/* Tipografía bonita y formal */
+body, ion-title, ion-label {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Fondo blanco para el contenido principal */
+ion-content {
+    --background: #ffffff !important;
+    padding: 16px;
+}
+
+/* Fondo claro para el header */
+ion-header {
+    --background: #f5f5f5 !important;
+}
+
+/* Fondo claro para el toolbar dentro del header */
+ion-toolbar {
+    --background: #f5f5f5 !important;
+    --color: #333 !important;
+}
+
+/* Título en el header */
+ion-title {
+    color: #000 !important;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Estilo para los párrafos (Descripción, Sección, Horario) */
+ion-content p {
+    color: #000 !important;  /* Texto en negro */
+    font-size: 16px;
+    margin-bottom: 12px;  /* Espaciado entre párrafos */
+}
+
+/* Botones principales con el estilo correcto */
+.primary-button {
+    --background: #00aaff !important;  /* Celeste */
+    --background-activated: #008ecc !important;  /* Celeste más oscuro al hacer clic */
+    --color: #fff !important;  /* Texto blanco */
+    --border-radius: 8px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+/* Botón de volver */
+ion-button[color="light"] {
+    --background: #e0f7ff !important;
+    --color: #007bbf !important;
+    --border-radius: 8px;
+    margin-top: 12px;
+}

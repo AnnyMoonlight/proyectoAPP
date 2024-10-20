@@ -1,0 +1,52 @@
+/* Fondo blanco para el contenido principal */
+ion-content {
+    --background: #ffffff !important;
+    padding: 16px;
+}
+
+/* Fondo claro para el header */
+ion-header {
+    --background: #f5f5f5 !important;
+}
+
+/* Fondo claro para el toolbar dentro del header */
+ion-toolbar {
+    --background: #f5f5f5 !important;
+    --color: #333 !important;
+    min-height: 56px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding-left: 0; /* Eliminar el margen izquierdo */
+    padding-right: 0; /* Eliminar el margen derecho */
+}
+
+/* Título en el header */
+ion-title {
+    color: #000 !important;
+    font-size: 18px !important; /* Ajustar el tamaño de la fuente */
+    font-weight: 600;
+    text-align: center !important; /* Centrar el texto */
+    white-space: normal !important; /* Permitir ajuste en varias líneas */
+    overflow-wrap: break-word !important; /* Romper palabras largas si es necesario */
+    width: 100%; /* Ocupa todo el espacio disponible */
+    max-width: 100%; /* Asegurar que el título use el 100% del ancho */
+}
+
+/* Botones de acción */
+ion-button {
+    --background: #00aaff !important;
+    --background-activated: #008ecc !important;
+    --color: #fff !important;
+    --border-radius: 8px !important;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+/* Botón de Volver */
+ion-button[color="light"] {
+    --background: #e0f7ff !important;
+    --color: #007bbf !important;
+    --border-radius: 8px;
+    margin-top: 12px;
+}

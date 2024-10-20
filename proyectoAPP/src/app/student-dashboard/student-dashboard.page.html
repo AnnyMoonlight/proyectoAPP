@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title-left" style="color: #000;">Bienvenido, {{ studentName }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" color="danger" style="--background: #ff4d4f; --color: #fff;">Cerrar Sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--background: #ffffff; padding: 16px;">
+  <div style="padding: 16px;">
+    <div *ngFor="let asignatura of asignaturas" (click)="verAsignatura(asignatura.id)" 
+         style="background-color: #f5f5f5; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+                margin-bottom: 12px; padding: 12px; font-size: 16px; cursor: pointer; color: #333;">
+      {{ asignatura.nombre }} - Sección: {{ asignatura.seccion }}
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- Ajustamos el título dentro de un div para controlar mejor su comportamiento -->
+    <ion-title>
+      <div style="text-align: center; font-size: 16px; white-space: normal; word-wrap: break-word; max-width: 100%;">
+        Use el botón para escanear el código QR
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="full" (click)="confirmAttendance()">Confirmar asistencia</ion-button>
+  <ion-button expand="full" color="light" (click)="goBack()">Volver</ion-button>
+</ion-content>

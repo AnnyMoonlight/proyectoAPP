@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="onSubmit()" style="--color: #ffffff;">Ingresar</ion-button>
+    <ion-button expand="full" color="light" (click)="recoverPassword()">Recuperar Contraseña</ion-button>
+    <!-- Botón para redirigir a la página de registro -->
+    <ion-button expand="full" color="primary" (click)="goToRegister()">Crear Cuenta</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title-left" style="color: #000;">Bienvenido, {{ professorName }}</ion-title> <!-- Aseguramos que el texto sea negro -->
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" color="danger">Cerrar Sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--background: #ffffff;">
+  <div style="padding: 16px;">
+    <div *ngFor="let asignatura of asignaturas" (click)="verAsignatura(asignatura.id)" 
+         style="background-color: #f5f5f5; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+                margin-bottom: 12px; padding: 12px; font-size: 16px; cursor: pointer; color: #000;">  <!-- Color negro directo -->
+      <span style="color: #000;">{{ asignatura.nombre }} - Sección: {{ asignatura.seccion }}</span>  <!-- Color negro directo -->
+    </div>
+  </div>
+</ion-content>

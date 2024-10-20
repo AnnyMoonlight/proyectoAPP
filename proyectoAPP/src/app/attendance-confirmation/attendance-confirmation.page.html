@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <div style="text-align: center; font-size: 16px; white-space: normal; word-wrap: break-word; max-width: 100%;">
+        Confirmación de Asistencia
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Mensaje dinámico de confirmación -->
+  <ion-label>{{ confirmationMessage }}</ion-label>
+
+  <ion-button expand="full" color="light" (click)="goBack()">Volver</ion-button>
+</ion-content>

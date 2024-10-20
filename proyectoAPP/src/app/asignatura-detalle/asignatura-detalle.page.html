@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ asignaturaDetalles?.nombre }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Mostrar solo los detalles de la asignatura seleccionada -->
+  <div *ngIf="asignaturaDetalles">
+    <p>Descripción: {{ asignaturaDetalles.descripcion }}</p>
+    <p>Sección: {{ asignaturaDetalles.seccion }}</p>
+    <p>Horario: {{ asignaturaDetalles.horario }}</p>
+  </div>
+
+  <!-- Botón para generar código QR con el color correcto -->
+  <ion-button *ngIf="userRole === 'profesor'" expand="full" (click)="goToQrPage()" class="primary-button">
+    Pasar asistencia
+  </ion-button>
+
+  <!-- Botón para escanear código QR con el mismo estilo -->
+  <ion-button *ngIf="userRole === 'estudiante'" expand="full" (click)="goToScanPage()" class="primary-button">
+    Escanear código QR
+  </ion-button>
+
+  <!-- Botón de volver -->
+  <ion-button expand="full" color="light" (click)="goBack()">Volver</ion-button>
+</ion-content>
